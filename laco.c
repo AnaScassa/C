@@ -2,7 +2,7 @@
 
 int main()
 {
-    float numNotas, nota, notaAtual, media;
+    float numNotas, nota, notaAtual, media, mediaSala;
     int repeticao = 1;
     float numAluno = 0;
 
@@ -34,8 +34,21 @@ int main()
         ("\nAluno reprovado!");
     }
 
+    mediaSala = mediaSala + media;
+
     printf("\nDigite '1' para calcular uma nova nota ");
     scanf("%d", &repeticao);
+
     } 
+
+    if(repeticao != 1){
+
+        mediaSala = mediaSala/ numAluno;
+
+        printf("A média da sala é: %.2f", mediaSala);
+        printf("\n\nDesligando programa...");
+    }
+
+    return 0;
 
 }
